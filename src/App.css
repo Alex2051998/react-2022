@@ -1,1 +1,15 @@
+.wraper{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 700px;
+}
+.right{
+    width: 700px;
+}
+.doun{
+    text-align: center;
+}
 
