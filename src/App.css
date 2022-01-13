@@ -1,1 +1,20 @@
+img{
+    width: 150px;
+    height: 150px;
+}
+.fligts{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin-top: 2px;
+}
 
+.fligtsLeft{
+    text-align: center;
+    padding-top: 20px;
+    width: 300px;
+}
+
+.fligtsRight{
+    padding: 10px 10px;
+}
