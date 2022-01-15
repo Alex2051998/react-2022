@@ -1,8 +1,12 @@
 import './App.css';
 
+import Users from "./Components/Users";
+
 function App() {
   return (
-   <div><h1>Hello</h1></div>
+   <div>
+     <Users/>
+   </div>
   );
 }
 
