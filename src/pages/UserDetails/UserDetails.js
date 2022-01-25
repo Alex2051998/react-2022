@@ -11,7 +11,7 @@ const UserDetails = () => {
 
     const {state} = useLocation();
 
-    console.log(useLocation());
+    console.log(state);
 
 
     useEffect((id) => {

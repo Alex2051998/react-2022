@@ -8,6 +8,8 @@ import UserPost from "./pages/UserPost/UserPost";
 import PostDetails from "./pages/PostDetails/PostDetails";
 import ComentsPost from "./pages/ComentsPost/ComentsPost";
 import Layout from "./pages/Layout/Layout";
+import UserAlbums from "./pages/UserAlbums/UserAlbums";
+import Photos from "./pages/Photos/Photos";
 
 function App() {
   return (
@@ -19,7 +21,11 @@ function App() {
                        <Route path={'posts'} element={<UserPost/>}/>
                    </Route>
 
+                   <Route path={':id/albums'} element={<UserAlbums/>}>
+                       <Route path={'photos'} element={<Photos/>}/>
+                   </Route>
                </Route>
+
 
 
                <Route path={'/posts'} element={<PostsPage/>}>

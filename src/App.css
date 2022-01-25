@@ -11,3 +11,16 @@
 .blockLeft{
     width: 700px;
 }
+
+.photo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photoTitle{
+}
+
+.photo img{
+    width: 150px;
+}
