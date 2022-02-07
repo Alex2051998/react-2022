@@ -1,9 +1,37 @@
-import './App.css';
+import React, {useReducer} from 'react';
 
-function App() {
-  return (
-   <div><h1>Hello</h1></div>
-  );
+import Form from "./components/Form/Form";
+import Dogs from "./components/Animals/Dogs";
+import Cats from "./components/Animals/Cats";
+import CatDog from "./components/Animals/CatDog.css"
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'ADD_CAT':
+            return{...state, cats:[...state.cats, {id:new Date().getTime(), name:action.payload.cat}]}
+        case 'ADD_DOG':
+            return {...state, dogs:[...state.dogs, {id:new Date().getTime(), name:action.payload.dog}]}
+        case 'DELL_CAT':
+            return {...state, cats: state.cats.filter(cat => cat.id !== action.payload.id)}
+        case 'DELL_DOG':
+            return {...state, dogs: state.dogs.filter(dog => dog.id !== action.payload.id)}
+        default:
+            return state
+    }
+
 }
+
+const App = () => {
+    const [{cats, dogs}, dispatch] = useReducer(reducer, {cats: [], dogs: []})
+    return (
+        <div>
+            <Form dispatch={dispatch}/>
+            <div className={'CatAndDog'}>
+                <Cats cats={cats} dispatch={dispatch}/>
+                <Dogs dogs={dogs} dispatch={dispatch}/>
+            </div>
+        </div>
+    );
+};
 
 export default App;

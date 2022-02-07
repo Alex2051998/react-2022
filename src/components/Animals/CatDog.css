@@ -1,0 +1,4 @@
+.CatAndDog{
+    display: flex;
+    justify-content: space-between;
+}
