@@ -21,13 +21,13 @@ const reducer = (state, action) => {
 }
 
 const App = () => {
-    const [{cats, dogs}, dispatch] = useReducer(reducer, {cats: [], dogs: []})
+    const [state, dispatch] = useReducer(reducer, {cats: [], dogs: []})
     return (
         <div>
             <Form dispatch={dispatch}/>
             <div className={'CatAndDog'}>
-                <Cats cats={cats} dispatch={dispatch}/>
-                <Dogs dogs={dogs} dispatch={dispatch}/>
+                <Cats cats={state} dispatch={dispatch}/>
+                <Dogs dogs={state} dispatch={dispatch}/>
             </div>
         </div>
     );

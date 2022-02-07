@@ -2,7 +2,7 @@ import React from 'react';
 
 import Cat from "./Cat";
 
-const Cats = ({cats, dispatch}) => {
+const Cats = ({cats:{cats}, dispatch}) => {
     return (
         <div>
             {cats.map(cat => <Cat key={cat.id} cat={cat} dispatch={dispatch}/>)}
