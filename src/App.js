@@ -3,7 +3,6 @@ import React, {useReducer} from 'react';
 import Form from "./components/Form/Form";
 import Dogs from "./components/Animals/Dogs";
 import Cats from "./components/Animals/Cats";
-import CatDog from "./components/Animals/CatDog.css"
 
 const reducer = (state, action) => {
     switch (action.type) {
