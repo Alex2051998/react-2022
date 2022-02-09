@@ -3,9 +3,16 @@ import Form from "./Form/Form";
 import AddAction from "./AddAction/AddAction";
 import {useReducer} from "react";
 
-function App() {
- [state, dispatch] = useReducer(reducer, addAction:{})
 
+const reducer = () => {
+  
+}
+
+function App() {
+    
+ const [state, dispatch] = useReducer(reducer, {addAction:[]})
+    
+    
     return (
         <div>
             <Form/>
