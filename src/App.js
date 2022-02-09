@@ -4,8 +4,13 @@ import AddAction from "./AddAction/AddAction";
 import {useReducer} from "react";
 
 
-const reducer = () => {
-  
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'ADD_ACTION':
+            return {...state, addAction: [...state.addAction, {id: new Date().getTime(), name: action.payload.adAction}]}
+        case 'DEL_ACTION':
+            return {...state}
+    }
 }
 
 function App() {
@@ -15,7 +20,7 @@ function App() {
     
     return (
         <div>
-            <Form/>
+            <Form dispatch-={dispatch}/>
             <AddAction/>
         </div>
     );
