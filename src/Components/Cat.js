@@ -4,7 +4,7 @@ const Cat = ({cat:{id, name}, dispatch}) => {
     return (
         <div>
             {name}
-            <button onClick={dispatch('DEL_CAT')}>Del</button>
+            <button onClick={() => dispatch({type:'DELL_CAT', payload:{id}})}>Del</button>
         </div>
     );
 };

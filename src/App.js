@@ -10,6 +10,8 @@ const reducer = (state, action) => {
             return {...state, cats: [...state.cats, {id: new Date().getTime(), name: action.payload.cat}]}
         case 'ADD_DOG':
             return {...state, dogs: [{id: new Date().getTime(), name: action.payload.dog}]}
+        case 'DELL_CAT':
+            return {...state, cats: [...state.cats.filter(state.cats.id !== id)]}
         default:
             return state
 
