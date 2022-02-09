@@ -1,9 +1,16 @@
 import './App.css';
+import Form from "./Form/Form";
+import AddAction from "./AddAction/AddAction";
 
 function App() {
-  return (
-   <div><h1>Hello</h1></div>
-  );
+
+
+    return (
+        <div>
+            <Form/>
+            <AddAction/>
+        </div>
+    );
 }
 
 export default App;
