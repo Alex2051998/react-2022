@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
 
 const Form = ({dispatch}) => {
-
+    const AddInput = useRef();
 
     const form = (e) => {
       e.preventDefault();
@@ -10,12 +10,12 @@ const Form = ({dispatch}) => {
     }
 
     const addData = () => {
-      dispatch({type:'ADD_ACTION', payload:{}})
+        dispatch({type:'ADD_ACTION', payload:{plus:AddInput.current.value}})
     }
     return (
         <div>
            <form onSubmit={form}>
-               <input type={'text'} placeholder={'addText'}/>
+               <input  type={'text'} placeholder={'add'} ref={AddInput}/>
                <button onClick={addData}>Add</button>
            </form>
         </div>
@@ -23,3 +23,5 @@ const Form = ({dispatch}) => {
 };
 
 export default Form;
+
+
